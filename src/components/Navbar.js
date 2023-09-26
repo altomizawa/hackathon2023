@@ -7,9 +7,9 @@ function Navbar() {
         <li className="navbar__item">
           <a href="#about-app">O QUE É?</a>
         </li>
-        <li className="navbar__item navbar__button">
-          <a href="#">ENVIAR OCORRÊNCIA</a>
-        </li>
+        <button className="navbar__button" href="#">
+          ENVIAR OCORRÊNCIA
+        </button>
       </ul>
     </nav>
   );
