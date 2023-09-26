@@ -5,10 +5,10 @@ function Navbar() {
     <nav className="navbar">
       <ul className="navbar__items">
         <li className="navbar__item">
-          <a href="#">O que é?</a>
+          <a href="#about-app">O QUE É?</a>
         </li>
         <li className="navbar__item navbar__button">
-          <a href="#">Enviar ocorrência</a>
+          <a href="#">ENVIAR OCORRÊNCIA</a>
         </li>
       </ul>
     </nav>

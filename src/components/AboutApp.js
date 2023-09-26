@@ -1,8 +1,9 @@
 import React from 'react';
+import mapVideo from '../assets/map.mp4';
 
 function AboutApp() {
   return (
-    <div className="about">
+    <div className="about" id="about-app">
       <div className="about__title-wrapper">
         <h1 className="about__title">O QUE É?</h1>
         <h4 className="about__text">

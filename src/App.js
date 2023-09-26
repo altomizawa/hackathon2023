@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import AboutApp from './components/AboutApp';
+import VerifyLocation from './components/VerifyLocation';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Header />
       <AboutApp />
+      <VerifyLocation />
     </>
   );
 }
