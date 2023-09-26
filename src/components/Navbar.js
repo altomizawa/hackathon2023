@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Navbar() {
+function Navbar({ isPopupActive, setIsPopupActive }) {
   return (
     <nav className="navbar">
       <ul className="navbar__items">
         <li className="navbar__item">
           <a href="#about-app">O QUE É?</a>
         </li>
-        <button className="navbar__button" href="#">
+        <button onClick={setIsPopupActive} className="navbar__button" href="#">
           ENVIAR OCORRÊNCIA
         </button>
       </ul>

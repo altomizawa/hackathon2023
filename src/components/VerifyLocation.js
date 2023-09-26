@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import bairros from "../data/bairros";
+import React, { useState } from 'react';
+import bairros from '../data/bairros';
 
 function VerifyLocation() {
-  console.log(bairros);
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = (e) => {
@@ -13,8 +12,8 @@ function VerifyLocation() {
       <div
         className={
           isClicked
-            ? "verify-location__form-wrapper animation__next"
-            : "verify-location__form-wrapper"
+            ? 'verify-location__form-wrapper animation__next'
+            : 'verify-location__form-wrapper'
         }
         onAnimationEnd={() => setIsClicked(false)}
       >
