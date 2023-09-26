@@ -204,6 +204,7 @@ code {
   z-index: 1000;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.6);
+  display: none;
 }
 
 .report-crime-popup__title {
