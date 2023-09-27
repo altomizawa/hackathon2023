@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "zona": "Norte",
+        "bairro": "Anhanguera",
+        "ocorrencias": {
+            "furto": "9",
+            "roubo": "6",
+            "acidenteDeTransito": "4",
+            "estupro": "9",
+            "homicidio": "6",
+            "lesaoCorporal": "4"
+        },
+        "nivelDeSegurancaGeral": "8",
+        "melhorDaRegiao": true,
+        "piorDaRegiao": false
+    },
+    {
+        "id": 2,
+        "zona": "Norte",
+        "bairro": "Brasilândia",
+        "ocorrencias": {
+            "furto": "5",
+            "roubo": "5",
+            "acidenteDeTransito": "3",
+            "estupro": "5",
+            "homicidio": "4",
+            "lesaoCorporal": "3"
+        },
+        "nivelDeSegurancaGeral": "4",
+        "melhorDaRegiao": false,
+        "piorDaRegiao": true
+    },
+    {
+        "id": 3,
+        "zona": "Norte",
+        "bairro": "Cachoeirinha",
+        "ocorrencias": {
+            "furto": "9",
+            "roubo": "6",
+            "acidenteDeTransito": "4",
+            "estupro": "9",
+            "homicidio": "6",
+            "lesaoCorporal": "4"
+        },
+        "nivelDeSegurancaGeral": "8",
+        "melhorDaRegiao": true,
+        "piorDaRegiao": false
+    },
+    {
+        "id": 4,
+        "zona": "Norte",
+        "bairro": "Casa Verde",
+        "ocorrencias": {
+            "furto": "5",
+            "roubo": "5",
+            "acidenteDeTransito": "3",
+            "estupro": "5",
+            "homicidio": "4",
+            "lesaoCorporal": "3"
+        },
+        "nivelDeSegurancaGeral": "4",
+        "melhorDaRegiao": false,
+        "piorDaRegiao": true
+    }    
+]
