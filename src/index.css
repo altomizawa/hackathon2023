@@ -1,10 +1,40 @@
-/* BEM structure */
-
-/* Blocks */
-
-/* Elements */
+/* IMPORTING ALL CSS FROM BLOCKS FOLDER */
 @import url('./blocks/button/__search/button__search.css');
 @import url('./blocks/animation/__next/animation__next.css');
+@import url('./blocks/navbar/navbar.css');
+@import url('./blocks/navbar/__item/navbar__item.css');
+@import url('./blocks/navbar/__items/navbar__items.css');
+@import url('./blocks/navbar/__button/navbar__button.css');
+@import url('./blocks/header/header.css');
+@import url('./blocks/header/__title-wrapper/header__title-wrapper.css');
+@import url('./blocks/header/__button/header__button.css');
+@import url('./blocks/header/__video/header__video.css');
+@import url('./blocks/header/__title/header__title.css');
+@import url('./blocks/header/__subtitle/header__subtitle.css');
+@import url('./blocks/about/about.css');
+@import url('./blocks/about/__title/about__title.css');
+@import url('./blocks/about/__text/about__text.css');
+@import url('./blocks/verify-location/verify-location.css');
+@import url('./blocks/verify-location/__form-wrapper/verify-location__form-wrapper.css');
+@import url('./blocks/verify-location/__form/verify-location__form.css');
+@import url('./blocks/verify-location/__score/verify-location__score.css');
+@import url('./blocks/verify-location/__details/verify-location__details.css');
+@import url('./blocks/verify-location/__details-title/verify-location__details-title.css');
+@import url('./blocks/verify-location/__details-item/verify-location__details-item.css');
+@import url('./blocks/verify-location/__title/verify-location__title.css');
+@import url('./blocks/verify-location/__text/verify-location__text.css');
+@import url('./blocks/verify-location/__dropdown/verify-location__dropdown.css');
+@import url('./blocks/verify-location/__navbar/verify-location__navbar.css');
+@import url('./blocks/report-crime-popup/report-crime-popup.css');
+@import url('./blocks/report-crime-popup/_active/report-crime-popup_active.css');
+@import url('./blocks/report-crime-popup/_title/report-crime-popup__title.css');
+@import url('./blocks/report-crime-popup/__form/report-crime-popup__form.css');
+@import url('./blocks/report-crime-popup/__input/report-crime-popup__input.css');
+@import url('./blocks/report-crime-popup/__button/report-crime-popup__button.css');
+@import url('./blocks/report-crime-popup/__close-button/report-crime-popup__close-button.css');
+@import url('./blocks/footer/footer.css');
+@import url('./blocks/footer/__text/footer__text.css');
+@import url('./blocks/verify-location/__form/_inactive/verify-location__form_inactive.css');
 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;600&display=swap');
@@ -30,362 +60,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.navbar {
-  margin-top: 2rem;
-  position: fixed;
-  right: 2rem;
-  overflow: hidden;
-  height: 150;
-  z-index: 1;
-}
-
-.navbar__items {
-  display: flex;
-  list-style: none;
-  column-gap: 2rem;
-  align-items: center;
-}
-
-.navbar__item > a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: black;
-  transition-duration: 1000ms;
-  font-weight: 600;
-}
-
-.navbar__item:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  background-color: black;
-}
-
-.navbar__button {
-  background-color: orange;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  color: white;
-  border: none;
-  color: black;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  pointer-events: all;
-  z-index: 1000;
-}
-
-.header {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  background-color: black;
-}
-
-.header__title-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.header__button {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 1rem;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  z-index: 10;
-}
-
-.header__video {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0.6;
-}
-
-.header__title-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-}
-
-.header__title {
-  z-index: 1;
-  color: white;
-  font-size: 10rem;
-}
-
-.header__subtitle {
-  z-index: 1;
-  color: white;
-  margin-top: -2rem;
-  font-size: 2rem;
-  letter-spacing: 0.35rem;
-}
-
-.about {
-  background-color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-}
-
-.about__title {
-  color: grey;
-  font-size: 4rem;
-  text-align: center;
-}
-
-.about__text {
-  margin-top: 3rem;
-  text-align: center;
-  color: grey;
-  font-weight: 300;
-  font-size: 1.5rem;
-  max-width: 60%;
-  margin-inline: auto;
-  line-height: 1.5;
-}
-
-.verify-location {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: grey;
-}
-
-.verify-location__form-wrapper {
-  width: 60%;
-  height: 80%;
-  margin-inline: auto;
-  background-color: grey;
-  border: white 1px solid;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.verify-location__form {
-  border: 1px solid white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 3rem;
-}
-
-.verify-location__score {
-  border: 1px solid white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 3rem;
-  position: relative;
-  text-align: center;
-  background-color: grey;
-}
-
-.verify-location__details {
-  border: 1px solid white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 3rem;
-  position: relative;
-  text-align: center;
-  background-color: grey;
-}
-
-.verify-location__details-title {
-  color: white;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.verify-location__details-item {
-  color: white;
-  font-size: 1.5rem;
-  text-align: left;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.verify-location__details-item:after {
-  content: '';
-  height: 1rem;
-  width: 3rem;
-  position: absolute;
-  top: 0.5rem;
-  background-color: darkslategray;
-  margin-left: 2rem;
-}
-
-.verify-location__title {
-  font-size: 4rem;
-  color: white;
-  max-width: 90%;
-}
-
-.verify-location__text {
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: white;
-}
-
-.verify-location__dropdown {
-  height: 3rem;
-  min-width: 20rem;
-  border-radius: 8px;
-  padding-inline: 0.5rem;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.verify-location__navbar {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 2rem;
-}
-
-.verify-location__navbar > a {
-  color: white;
-  text-decoration: none;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  cursor: pointer;
-  transition: ease-in 300ms;
-}
-
-.verify-location__navbar > a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  color: darkgray;
-}
-
-.verify-location__score > button {
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-  transition: ease-in 200ms;
-}
-
-.verify-location__score > button:hover {
-  background-color: white;
-  color: grey;
-}
-
-.report-crime-popup {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 1000;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.6);
-  transform: translateY(-100%);
-  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition-duration: 300ms;
-}
-
-.report-crime-popup_active {
-  transform: translateY(0%);
-}
-
-.report-crime-popup__title {
-  font-size: 3rem;
-}
-
-.report-crime-popup__form {
-  width: 50%;
-  height: 60%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 1rem;
-  background-color: orange;
-  position: relative;
-}
-
-.report-crime-popup__input {
-  width: 50%;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: none;
-  font-size: 1rem;
-}
-
-.report-crime-popup__button {
-  width: 53%;
-  margin-inline: auto;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.report-crime-popup__button:hover {
-  background-color: black;
-  color: white;
-  transition-duration: 400ms;
-}
-
-.report-crime-popup__close-button {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  font-size: 3rem;
-  cursor: pointer;
-  font-weight: 600;
-  user-select: none;
-}
-
-.hide-form-section {
-  display: none;
 }

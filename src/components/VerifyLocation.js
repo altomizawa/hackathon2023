@@ -13,18 +13,18 @@ function VerifyLocation({ data }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsClicked(true);
-    formSection.classList.add('hide-form-section');
+    formSection.classList.add('verify-location__form_inactive');
   };
 
   const handleRedo = () => {
-    formSection.classList.remove('hide-form-section');
+    formSection.classList.remove('verify-location__form_inactive');
   };
   const handleDetails = () => {
-    scoreSection.classList.add('hide-form-section');
+    scoreSection.classList.add('verify-location__form_inactive');
   };
 
   const handleSeeScore = () => {
-    scoreSection.classList.remove('hide-form-section');
+    scoreSection.classList.remove('verify-location__form_inactive');
   };
 
   const handleDropDownChange = (e) => {
@@ -33,7 +33,7 @@ function VerifyLocation({ data }) {
   };
 
   return (
-    <section className="verify-location">
+    <section className="verify-location" id="verify-location">
       <div className="verify-location__form-wrapper">
         <div className="verify-location__form" id="form">
           <h2 className="verify-location__title">Selecione um bairro:</h2>
@@ -90,31 +90,6 @@ function VerifyLocation({ data }) {
           </div>
         </div>
       </div>
-      {/* <div
-        className={
-          isClicked
-            ? 'verify-location__form-wrapper animation__next'
-            : 'verify-location__form-wrapper'
-        }
-        onAnimationEnd={() => setIsClicked(false)}
-      >
-        <div className="teste">teste</div>
-        <h2 className="verify-location__title">Selecione um bairro:</h2>
-        <select
-          className="verify-location__dropdown"
-          onChange={handleDropDownChange}
-          value={JSON.stringify(selected)}
-        >
-          {data.map((bairro, i) => (
-            <option key={i + 1} value={JSON.stringify(bairro)}>
-              {bairro.name}
-            </option>
-          ))}
-        </select>
-        <button onClick={handleSubmit} className="button__search">
-          Pesquisar
-        </button>
-      </div> */}
     </section>
   );
 }

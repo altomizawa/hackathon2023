@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import AboutApp from './components/AboutApp';
 import VerifyLocation from './components/VerifyLocation';
 import ReportCrimePopup from './components/ReportCrimePopUp';
+import Footer from './components/Footer';
 
 async function fetchData() {
   try {
@@ -33,6 +34,7 @@ function App() {
       <Header />
       <AboutApp />
       <VerifyLocation data={data} />
+      <Footer />
     </>
   );
 }

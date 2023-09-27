@@ -1,0 +1,8 @@
+.navbar {
+  margin-top: 2rem;
+  position: fixed;
+  right: 2rem;
+  overflow: hidden;
+  height: 150;
+  z-index: 1;
+}

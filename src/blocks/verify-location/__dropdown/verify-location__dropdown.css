@@ -1,0 +1,9 @@
+.verify-location__dropdown {
+  height: 3rem;
+  min-width: 20rem;
+  border-radius: 8px;
+  padding-inline: 0.5rem;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}

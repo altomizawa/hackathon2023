@@ -1,0 +1,23 @@
+.verify-location__navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 2rem;
+}
+
+.verify-location__navbar > a {
+  color: white;
+  text-decoration: none;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: ease-in 300ms;
+}
+
+.verify-location__navbar > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  color: darkgray;
+}

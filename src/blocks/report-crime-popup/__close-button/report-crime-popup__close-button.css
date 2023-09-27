@@ -1,0 +1,9 @@
+.report-crime-popup__close-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}

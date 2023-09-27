@@ -23,7 +23,9 @@ function Header() {
         <h4 className="header__subtitle">
           SAIBA QUAL LUGAR EVITAR ANTES DE IR
         </h4>
-        <button className="header__button">VERIFICAR LOCAL</button>
+        <a href="#verify-location" className="header__button">
+          VERIFICAR LOCAL
+        </a>
       </div>
     </div>
   );

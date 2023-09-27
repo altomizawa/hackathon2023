@@ -1,0 +1,7 @@
+.footer__text {
+  color: darkslategray;
+  letter-spacing: 0.08rem;
+  width: 80%;
+  margin-inline: auto;
+  text-align: center;
+}

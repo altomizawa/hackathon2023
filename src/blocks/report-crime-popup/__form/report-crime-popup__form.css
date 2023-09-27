@@ -1,0 +1,12 @@
+.report-crime-popup__form {
+  width: 50%;
+  height: 60%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  background-color: orange;
+  position: relative;
+}

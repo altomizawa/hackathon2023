@@ -1,0 +1,10 @@
+.about__text {
+  margin-top: 3rem;
+  text-align: center;
+  color: grey;
+  font-weight: 300;
+  font-size: 1.5rem;
+  max-width: 60%;
+  margin-inline: auto;
+  line-height: 1.5;
+}
