@@ -4,20 +4,93 @@ import bairros from '../data/bairros';
 function VerifyLocation({ data }) {
   const [isClicked, setIsClicked] = useState(false);
   const [selected, setSelected] = useState(null);
+  const [bairro, setBairro] = useState('');
+
+  const formSection = document.querySelector('.verify-location__form');
+  const scoreSection = document.querySelector('.verify-location__score');
+  // const detailSection = document.querySelector('verify-location__details')
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsClicked(true);
-    console.log('Selected bairro:', selected);
+    formSection.classList.add('hide-form-section');
+  };
+
+  const handleRedo = () => {
+    formSection.classList.remove('hide-form-section');
+  };
+  const handleDetails = () => {
+    scoreSection.classList.add('hide-form-section');
+  };
+
+  const handleSeeScore = () => {
+    scoreSection.classList.remove('hide-form-section');
   };
 
   const handleDropDownChange = (e) => {
     setSelected(e.target.value);
+    setBairro(JSON.parse(e.target.value));
   };
 
   return (
     <section className="verify-location">
-      <div
+      <div className="verify-location__form-wrapper">
+        <div className="verify-location__form" id="form">
+          <h2 className="verify-location__title">Selecione um bairro:</h2>
+          <select
+            className="verify-location__dropdown"
+            onChange={handleDropDownChange}
+            value={JSON.stringify(selected)}
+          >
+            {data.map((bairro, i) => (
+              <option key={i + 1} value={JSON.stringify(bairro)}>
+                {bairro.name}
+              </option>
+            ))}
+          </select>
+          <button onClick={handleSubmit} className="button__search">
+            PESQUISAR
+          </button>
+        </div>
+        <div className="verify-location__score" id="score">
+          <div className="verify-location__navbar">
+            <a onClick={handleRedo}>← REFAZER</a>
+            <a onClick={handleDetails}>MAIS DETALHES →</a>
+          </div>
+          <h2 className="verify-location__title">
+            O bairro {bairro.name} tem um nível de segurança de 6/10.
+          </h2>
+          <p className="verify-location__text">
+            VOCÊ ESTÁ NO BAIRRO MAIS SEGURO DA REGIÃO
+          </p>
+
+          <button className="verify-location__button">
+            VEJA OPÇÕES MAIS SEGURAS
+          </button>
+        </div>
+        <div className="verify-location__details" id="score">
+          <div className="verify-location__navbar">
+            <a onClick={handleSeeScore}>← VER SCORE</a>
+          </div>
+          <div clasName="verify-location__details-items">
+            <h2 className="verify-location__details-title">
+              DETALHES DO BAIRRO {bairro.name}:
+            </h2>
+
+            <p className="verify-location__details-item">FURTOS: 43</p>
+            <p className="verify-location__details-item">ROUBOS: 43</p>
+            <p className="verify-location__details-item">
+              ACIDENTES DE TRÂNSITO: 43
+            </p>
+            <p className="verify-location__details-item">ESTUPROS: 43</p>
+            <p className="verify-location__details-item">HOMICÍDIOS: 43</p>
+            <p className="verify-location__details-item">
+              LESÕES CORPORAIS: 43
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* <div
         className={
           isClicked
             ? 'verify-location__form-wrapper animation__next'
@@ -25,6 +98,7 @@ function VerifyLocation({ data }) {
         }
         onAnimationEnd={() => setIsClicked(false)}
       >
+        <div className="teste">teste</div>
         <h2 className="verify-location__title">Selecione um bairro:</h2>
         <select
           className="verify-location__dropdown"
@@ -40,7 +114,7 @@ function VerifyLocation({ data }) {
         <button onClick={handleSubmit} className="button__search">
           Pesquisar
         </button>
-      </div>
+      </div> */}
     </section>
   );
 }

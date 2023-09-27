@@ -1,12 +1,17 @@
 .button__search {
-  width: 50%;
-  height: 10%;
   border-radius: 10px;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
+  padding: 1rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  color: white;
+  transition: ease-in 200ms;
 }
 
 .button__search:hover {
   cursor: pointer;
+  background-color: white;
+  color: black;
 }
