@@ -1,5 +1,7 @@
 .header__title {
   z-index: 1;
   color: white;
-  font-size: 10rem;
+  font-size: clamp(5rem, 20vw, 10rem);
+  padding-inline: 1rem;
+  line-height: clamp(5rem, 20vw, 10rem);
 }
