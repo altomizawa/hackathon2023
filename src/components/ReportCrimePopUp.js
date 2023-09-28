@@ -24,12 +24,12 @@ function ReportCrimePopup({ isPopupActive, setIsPopupActive }) {
       }
     >
       <form className="report-crime-popup__form">
-        <a
+        <button
           onClick={setIsPopupActive}
           className="report-crime-popup__close-button"
         >
           X
-        </a>
+        </button>
         <h3 className="report-crime-popup__title">ENVIAR OCORRÊNCIA</h3>
         <select
           className="verify-location__dropdown"
