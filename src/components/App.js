@@ -1,16 +1,15 @@
-import React from 'react';
-import { useState } from 'react';
-import './App.css';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import AboutApp from './components/AboutApp';
-import VerifyLocation from './components/VerifyLocation';
-import ReportCrimePopup from './components/ReportCrimePopUp';
-import Footer from './components/Footer';
+import React from "react";
+import { useState } from "react";
+import Header from "./Header";
+import Navbar from "./Navbar";
+import AboutApp from "./AboutApp";
+import VerifyLocation from "./VerifyLocation";
+import ReportCrimePopup from "./ReportCrimePopUp";
+import Footer from "./Footer";
 
 async function fetchData() {
   try {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
     const data = await response.json();
     return data.results;
   } catch (err) {
