@@ -58,7 +58,7 @@ function VerifyLocation({ data }) {
             <a onClick={handleDetails}>MAIS DETALHES →</a>
           </div>
           <h2 className="verify-location__title">
-            O bairro {bairro.name} tem um nível de segurança de 6/10.
+            O bairro {bairro.name} tem um nível de segurança de 6/10*.
           </h2>
           <p className="verify-location__text">
             VOCÊ ESTÁ NO BAIRRO MAIS SEGURO DA REGIÃO
@@ -67,6 +67,9 @@ function VerifyLocation({ data }) {
           <button className="verify-location__button">
             VEJA OPÇÕES MAIS SEGURAS
           </button>
+          <p className="verify-location__disclaimer">
+            * Baseado nos dados dos últimos 7 meses.
+          </p>
         </div>
         <div className="verify-location__details" id="score">
           <div className="verify-location__navbar">
@@ -74,7 +77,7 @@ function VerifyLocation({ data }) {
           </div>
           <div clasName="verify-location__details-items">
             <h2 className="verify-location__details-title">
-              DETALHES DO BAIRRO {bairro.name}:
+              DETALHES DO BAIRRO {bairro.name}*:
             </h2>
 
             <p className="verify-location__details-item">FURTOS: 43</p>
@@ -88,6 +91,9 @@ function VerifyLocation({ data }) {
               LESÕES CORPORAIS: 43
             </p>
           </div>
+          <p className="verify-location__disclaimer">
+            * Baseado nos dados dos últimos 7 meses.
+          </p>
         </div>
       </div>
     </section>

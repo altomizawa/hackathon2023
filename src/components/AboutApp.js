@@ -7,18 +7,14 @@ function AboutApp() {
       <div className="about__title-wrapper">
         <h1 className="about__title">O QUE É?</h1>
         <h4 className="about__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet at
-          enim id convallis. Etiam porttitor orci risus, ut viverra dolor auctor
-          sit amet. Proin accumsan ullamcorper leo auctor aliquet. Fusce non
-          nunc nec magna molestie sagittis. Sed faucibus semper orci, eget
-          feugiat augue rhoncus vel. Etiam convallis non ipsum vitae placerat.
-          Donec non ipsum vel nibh placerat condimentum ac in mi. Integer id
-          elit a dui tincidunt mollis. Proin ornare quam in enim suscipit, in
-          efficitur nulla dignissim. Etiam dictum bibendum nisl, vel bibendum
-          libero posuere nec. Pellentesque habitant morbi tristique senectus et
-          netus et malesuada fames ac turpis egestas. Fusce gravida facilisis
-          hendrerit. Aliquam eget auctor nunc. Vivamus et maximus mi. Nunc
-          dapibus convallis ornare. Donec et scelerisque tellus.
+          O AM I SAFE? é um aplicativo que visa ajudar todas as pessoas que não
+          conhecem a cidade de São Paulo a se sentirem mais seguras quando
+          estiverem lá, seja visitando ou a trabalho. Baseado em um banco de
+          dados de 7 meses para trás, o aplicativo é capaz de dizer qual o nível
+          de segurança de um bairro específico. O funcionamento é simples: basta
+          escolher o bairro que você deseja pesquisar e o aplicativo
+          imediatamente te retornará com uma pontuação de 'segurança' e ainda te
+          sugerirá outras opções mais seguras, caso sua opção não seja.
         </h4>
       </div>
     </div>

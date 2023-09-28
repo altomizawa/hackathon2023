@@ -35,6 +35,7 @@
 @import url('./blocks/footer/footer.css');
 @import url('./blocks/footer/__text/footer__text.css');
 @import url('./blocks/verify-location/__form/_inactive/verify-location__form_inactive.css');
+@import url('./blocks/verify-location/__disclaimer/verify-location__disclaimer.css');
 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;600&display=swap');
