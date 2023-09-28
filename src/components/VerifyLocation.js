@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function VerifyLocation({ data }) {
   const [selected, setSelected] = useState(null);
-  const [bairro, setBairro] = useState('');
+  const [bairro, setBairro] = useState("");
 
-  const formSection = document.querySelector('.verify-location__form');
-  const scoreSection = document.querySelector('.verify-location__score');
+  const formSection = document.querySelector(".verify-location__form");
+  const scoreSection = document.querySelector(".verify-location__score");
   // const detailSection = document.querySelector('verify-location__details')
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    formSection.classList.add('verify-location__form_inactive');
+    formSection.classList.add("verify-location__form_inactive");
   };
 
   const handleRedo = () => {
-    formSection.classList.remove('verify-location__form_inactive');
+    formSection.classList.remove("verify-location__form_inactive");
   };
   const handleDetails = () => {
-    scoreSection.classList.add('verify-location__form_inactive');
+    scoreSection.classList.add("verify-location__form_inactive");
   };
 
   const handleSeeScore = () => {
-    scoreSection.classList.remove('verify-location__form_inactive');
+    scoreSection.classList.remove("verify-location__form_inactive");
   };
 
   const handleDropDownChange = (e) => {
@@ -39,6 +39,7 @@ function VerifyLocation({ data }) {
             onChange={handleDropDownChange}
             value={JSON.stringify(selected)}
           >
+            <option value="">Selecione um bairro</option>
             {data.map((bairro, i) => (
               <option key={i + 1} value={JSON.stringify(bairro)}>
                 {bairro.name}

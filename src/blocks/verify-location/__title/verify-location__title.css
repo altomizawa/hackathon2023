@@ -1,5 +1,6 @@
 .verify-location__title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 10vw, 4rem);
   color: white;
-  max-width: 90%;
+  text-align: center;
+  padding-inline: 2rem;
 }

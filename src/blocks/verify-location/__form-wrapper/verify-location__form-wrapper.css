@@ -1,5 +1,5 @@
 .verify-location__form-wrapper {
-  width: 60%;
+  max-width: 60%;
   height: 80%;
   margin-inline: auto;
   background-color: grey;
@@ -7,4 +7,10 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 722px) {
+  .verify-location__form-wrapper {
+    min-width: 80%;
+  }
 }
