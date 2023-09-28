@@ -4,4 +4,5 @@
   width: 80%;
   margin-inline: auto;
   text-align: center;
+  font-size: clamp(0.75rem, 2vw, 1rem);
 }
