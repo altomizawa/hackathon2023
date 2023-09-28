@@ -9,9 +9,9 @@ import Footer from "./Footer";
 
 async function fetchData() {
   try {
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+    const response = await fetch("https://iackathon-api.onrender.com/");
     const data = await response.json();
-    return data.results;
+    return data;
   } catch (err) {
     console.log(err);
   }
@@ -25,11 +25,11 @@ function App() {
   }
   return (
     <>
-      <Navbar isPopupActive={isPopupActive} setIsPopupActive={handlePopup} />
       <ReportCrimePopup
         isPopupActive={isPopupActive}
         setIsPopupActive={handlePopup}
       />
+      <Navbar isPopupActive={isPopupActive} setIsPopupActive={handlePopup} />
       <Header />
       <AboutApp />
       <VerifyLocation data={data} />
