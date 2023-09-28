@@ -1,8 +1,7 @@
 .navbar {
-  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   position: fixed;
   overflow: hidden;
-  height: 3.3rem;
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.267);
   width: 100%;

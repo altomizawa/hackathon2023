@@ -1,0 +1,12 @@
+.button {
+  background-color: transparent;
+  border: none;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.26s ease-in;
+}

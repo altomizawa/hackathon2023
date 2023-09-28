@@ -2,8 +2,8 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-size: 1rem;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: clamp(0.85rem, 3vw, 1rem);
   font-weight: 400;
   color: white;
 }

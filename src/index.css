@@ -12,6 +12,7 @@
 @import url("./blocks/verify-location/verify-location.css");
 @import url("./blocks/report-crime-popup/report-crime-popup.css");
 @import url("./blocks/footer/footer.css");
+@import url("./blocks/button/button.css");
 
 /* ELEMENTS */
 @import url("./blocks/navbar/__item/navbar__item.css");

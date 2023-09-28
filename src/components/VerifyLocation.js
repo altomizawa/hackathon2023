@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
 function VerifyLocation({ data }) {
-  const [selected, setSelected] = useState(null);
   const [bairro, setBairro] = useState("");
+  const [dropdownSelection, setDropdownSelection] = useState(
+    "Selecione um bairro"
+  );
 
   const formSection = document.querySelector(".verify-location__form");
   const scoreSection = document.querySelector(".verify-location__score");
@@ -25,8 +27,9 @@ function VerifyLocation({ data }) {
   };
 
   const handleDropDownChange = (e) => {
-    setSelected(e.target.value);
+    // setSelected(e.target.value);
     setBairro(JSON.parse(e.target.value));
+    setDropdownSelection(e.target.value);
   };
 
   return (
@@ -37,7 +40,7 @@ function VerifyLocation({ data }) {
           <select
             className="verify-location__dropdown"
             onChange={handleDropDownChange}
-            value={JSON.stringify(selected)}
+            value={dropdownSelection}
           >
             <option value="">Selecione um bairro</option>
             {data.map((bairro, i) => (
@@ -46,14 +49,22 @@ function VerifyLocation({ data }) {
               </option>
             ))}
           </select>
-          <button onClick={handleSubmit} className="button__search">
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="button button__search"
+          >
             PESQUISAR
           </button>
         </div>
         <div className="verify-location__score" id="score">
           <div className="verify-location__navbar">
-            <a onClick={handleRedo}>← REFAZER</a>
-            <a onClick={handleDetails}>MAIS DETALHES →</a>
+            <button type="button" className="button" onClick={handleRedo}>
+              ← REFAZER
+            </button>
+            <button type="button" className="button" onClick={handleDetails}>
+              MAIS DETALHES →
+            </button>
           </div>
           <h2 className="verify-location__title">
             O bairro {bairro.name} tem um nível de segurança de 6/10*.
@@ -71,7 +82,9 @@ function VerifyLocation({ data }) {
         </div>
         <div className="verify-location__details" id="score">
           <div className="verify-location__navbar">
-            <a onClick={handleSeeScore}>← VER SCORE</a>
+            <button type="button" className="button" onClick={handleSeeScore}>
+              ← VER SCORE
+            </button>
           </div>
           <div className="verify-location__details-items">
             <h2 className="verify-location__details-title">

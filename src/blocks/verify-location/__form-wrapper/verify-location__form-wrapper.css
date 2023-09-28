@@ -1,6 +1,6 @@
 .verify-location__form-wrapper {
   max-width: 60%;
-  height: 80%;
+  min-height: 80%;
   margin-inline: auto;
   background-color: grey;
   border: white 1px solid;
