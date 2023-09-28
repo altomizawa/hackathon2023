@@ -1,5 +1,4 @@
 import React from 'react';
-import mapVideo from '../assets/map.mp4';
 
 function AboutApp() {
   return (

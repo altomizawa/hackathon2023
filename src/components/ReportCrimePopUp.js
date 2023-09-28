@@ -1,9 +1,20 @@
-function preventSubmit(evt) {
-  evt.preventDefault();
-  console.log('prevented');
-}
+import { useState } from 'react';
+import bairros from '../data/bairros';
+import ocorrencias from '../data/ocorrencias';
 
 function ReportCrimePopup({ isPopupActive, setIsPopupActive }) {
+  // PREVENT DEFAULT ACTION IN SUBMIT BUTTON
+  function preventSubmit(evt) {
+    evt.preventDefault();
+    console.log('prevented');
+    setIsPopupActive(false);
+  }
+
+  const [bairro, setBairro] = useState('');
+
+  function handleDropDownChange(e) {
+    console.log(e.target);
+  }
   return (
     <div
       className={
@@ -19,16 +30,43 @@ function ReportCrimePopup({ isPopupActive, setIsPopupActive }) {
         >
           X
         </a>
-        <h3 className="report-crime-popup__title">REPORT NEW CRIME!</h3>
-        <input className="report-crime-popup__input" placeholder="Nome"></input>
-        <input
-          className="report-crime-popup__input"
-          placeholder="bairro"
-        ></input>
-        <input
-          className="report-crime-popup__input"
-          placeholder="Tipo de crime"
-        ></input>
+        <h3 className="report-crime-popup__title">ENVIAR OCORRÊNCIA</h3>
+        <select
+          className="verify-location__dropdown"
+          onChange={handleDropDownChange}
+          value={bairro}
+        >
+          {bairros.map((bairro, i) => (
+            <option key={i + 1} value={bairro}>
+              {bairro.zona}
+            </option>
+          ))}
+        </select>
+
+        <select
+          className="verify-location__dropdown"
+          // onChange={handleDropDownChange}
+          //value="tucuruvi"
+        >
+          {bairros[0].bairros.map((bairro, i) => (
+            <option key={i + 1} value={bairro}>
+              {bairro}
+            </option>
+          ))}
+        </select>
+
+        <select
+          className="verify-location__dropdown"
+          // onChange={handleDropDownChange}
+          //value="tucuruvi"
+        >
+          {ocorrencias.map((ocorrencia, i) => (
+            <option key={i + 1} value={ocorrencia}>
+              {ocorrencia}
+            </option>
+          ))}
+        </select>
+
         <button onClick={preventSubmit} className="report-crime-popup__button">
           ENVIAR
         </button>

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import bairros from '../data/bairros';
 
 function VerifyLocation({ data }) {
-  const [isClicked, setIsClicked] = useState(false);
   const [selected, setSelected] = useState(null);
   const [bairro, setBairro] = useState('');
 
@@ -12,7 +10,6 @@ function VerifyLocation({ data }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsClicked(true);
     formSection.classList.add('verify-location__form_inactive');
   };
 
@@ -75,21 +72,20 @@ function VerifyLocation({ data }) {
           <div className="verify-location__navbar">
             <a onClick={handleSeeScore}>← VER SCORE</a>
           </div>
-          <div clasName="verify-location__details-items">
+          <div className="verify-location__details-items">
             <h2 className="verify-location__details-title">
               DETALHES DO BAIRRO {bairro.name}*:
             </h2>
-
-            <p className="verify-location__details-item">FURTOS: 43</p>
-            <p className="verify-location__details-item">ROUBOS: 43</p>
             <p className="verify-location__details-item">
               ACIDENTES DE TRÂNSITO: 43
             </p>
             <p className="verify-location__details-item">ESTUPROS: 43</p>
+            <p className="verify-location__details-item">FURTOS: 43</p>
             <p className="verify-location__details-item">HOMICÍDIOS: 43</p>
             <p className="verify-location__details-item">
               LESÕES CORPORAIS: 43
             </p>
+            <p className="verify-location__details-item">ROUBOS: 43</p>
           </div>
           <p className="verify-location__disclaimer">
             * Baseado nos dados dos últimos 7 meses.
