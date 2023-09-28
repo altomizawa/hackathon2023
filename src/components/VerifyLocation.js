@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function VerifyLocation({ data }) {
-  console.log(data);
   const [selected, setSelected] = useState(null);
   const [bairro, setBairro] = useState('');
 
@@ -31,6 +30,16 @@ function VerifyLocation({ data }) {
     setSelected(e.target.value);
     setBairro(JSON.parse(e.target.value));
   };
+
+  //CREATE AN ARRAY THAT SHOWS NEIGHBORHOODS SAFER THAN SELECTION
+  const saferToGo = data.filter(
+    (item) =>
+      item.TOTAL > bairro.TOTAL &&
+      item.REGIÃO === bairro.REGIÃO &&
+      item.TOTAL > 6
+  );
+
+  console.log(saferToGo);
 
   //FUNCTION THAT RETURNS THE TEXT EXPLAINING HOW SAFE THE NEIGHBORHOOD IS
   function isItSafeText() {
