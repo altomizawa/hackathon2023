@@ -1,64 +1,64 @@
 /* IMPORTING ALL CSS FROM BLOCKS FOLDER */
-@import url('./blocks/button/__search/button__search.css');
-@import url('./blocks/animation/__next/animation__next.css');
-@import url('./blocks/navbar/navbar.css');
-@import url('./blocks/navbar/__item/navbar__item.css');
-@import url('./blocks/navbar/__items/navbar__items.css');
-@import url('./blocks/navbar/__button/navbar__button.css');
-@import url('./blocks/header/header.css');
-@import url('./blocks/header/__title-wrapper/header__title-wrapper.css');
-@import url('./blocks/header/__button/header__button.css');
-@import url('./blocks/header/__video/header__video.css');
-@import url('./blocks/header/__title/header__title.css');
-@import url('./blocks/header/__subtitle/header__subtitle.css');
-@import url('./blocks/about/about.css');
-@import url('./blocks/about/__title/about__title.css');
-@import url('./blocks/about/__text/about__text.css');
-@import url('./blocks/verify-location/verify-location.css');
-@import url('./blocks/verify-location/__form-wrapper/verify-location__form-wrapper.css');
-@import url('./blocks/verify-location/__form/verify-location__form.css');
-@import url('./blocks/verify-location/__score/verify-location__score.css');
-@import url('./blocks/verify-location/__details/verify-location__details.css');
-@import url('./blocks/verify-location/__details-title/verify-location__details-title.css');
-@import url('./blocks/verify-location/__details-item/verify-location__details-item.css');
-@import url('./blocks/verify-location/__title/verify-location__title.css');
-@import url('./blocks/verify-location/__text/verify-location__text.css');
-@import url('./blocks/verify-location/__dropdown/verify-location__dropdown.css');
-@import url('./blocks/verify-location/__navbar/verify-location__navbar.css');
-@import url('./blocks/report-crime-popup/report-crime-popup.css');
-@import url('./blocks/report-crime-popup/_active/report-crime-popup_active.css');
-@import url('./blocks/report-crime-popup/_title/report-crime-popup__title.css');
-@import url('./blocks/report-crime-popup/__form/report-crime-popup__form.css');
-@import url('./blocks/report-crime-popup/__input/report-crime-popup__input.css');
-@import url('./blocks/report-crime-popup/__button/report-crime-popup__button.css');
-@import url('./blocks/report-crime-popup/__close-button/report-crime-popup__close-button.css');
-@import url('./blocks/footer/footer.css');
-@import url('./blocks/footer/__text/footer__text.css');
-@import url('./blocks/verify-location/__form/_inactive/verify-location__form_inactive.css');
-@import url('./blocks/verify-location/__disclaimer/verify-location__disclaimer.css');
+@import url("./blocks/button/__search/button__search.css");
+@import url("./blocks/animation/__next/animation__next.css");
+@import url("./blocks/navbar/navbar.css");
+@import url("./blocks/navbar/__item/navbar__item.css");
+@import url("./blocks/navbar/__items/navbar__items.css");
+@import url("./blocks/navbar/__button/navbar__button.css");
+@import url("./blocks/header/header.css");
+@import url("./blocks/header/__title-wrapper/header__title-wrapper.css");
+@import url("./blocks/header/__button/header__button.css");
+@import url("./blocks/header/__video/header__video.css");
+@import url("./blocks/header/__title/header__title.css");
+@import url("./blocks/header/__subtitle/header__subtitle.css");
+@import url("./blocks/about/about.css");
+@import url("./blocks/about/__title/about__title.css");
+@import url("./blocks/about/__text/about__text.css");
+@import url("./blocks/verify-location/verify-location.css");
+@import url("./blocks/verify-location/__form-wrapper/verify-location__form-wrapper.css");
+@import url("./blocks/verify-location/__form/verify-location__form.css");
+@import url("./blocks/verify-location/__score/verify-location__score.css");
+@import url("./blocks/verify-location/__details/verify-location__details.css");
+@import url("./blocks/verify-location/__details-title/verify-location__details-title.css");
+@import url("./blocks/verify-location/__details-item/verify-location__details-item.css");
+@import url("./blocks/verify-location/__title/verify-location__title.css");
+@import url("./blocks/verify-location/__text/verify-location__text.css");
+@import url("./blocks/verify-location/__dropdown/verify-location__dropdown.css");
+@import url("./blocks/verify-location/__navbar/verify-location__navbar.css");
+@import url("./blocks/report-crime-popup/report-crime-popup.css");
+@import url("./blocks/report-crime-popup/_active/report-crime-popup_active.css");
+@import url("./blocks/report-crime-popup/_title/report-crime-popup__title.css");
+@import url("./blocks/report-crime-popup/__form/report-crime-popup__form.css");
+@import url("./blocks/report-crime-popup/__input/report-crime-popup__input.css");
+@import url("./blocks/report-crime-popup/__button/report-crime-popup__button.css");
+@import url("./blocks/report-crime-popup/__close-button/report-crime-popup__close-button.css");
+@import url("./blocks/footer/footer.css");
+@import url("./blocks/footer/__text/footer__text.css");
+@import url("./blocks/verify-location/__form/_inactive/verify-location__form_inactive.css");
+@import url("./blocks/verify-location/__disclaimer/verify-location__disclaimer.css");
 
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;600&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 * {
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
   margin: 0;
   padding: 0;
   /* border: 1px solid white; */
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

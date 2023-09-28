@@ -1,5 +1,5 @@
 .navbar__item > a {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1rem);
   text-decoration: none;
   color: black;
   transition-duration: 1000ms;
@@ -7,7 +7,7 @@
 }
 
 .navbar__item:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;

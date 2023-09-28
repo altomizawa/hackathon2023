@@ -3,4 +3,6 @@
   list-style: none;
   column-gap: 2rem;
   align-items: center;
+  justify-content: flex-end;
+  padding-right: 2rem;
 }

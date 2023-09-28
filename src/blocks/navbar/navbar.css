@@ -1,8 +1,10 @@
 .navbar {
-  margin-top: 2rem;
+  padding-top: 1rem;
   position: fixed;
-  right: 2rem;
   overflow: hidden;
-  height: 150;
-  z-index: 1;
+  height: 3.3rem;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.267);
+  width: 100%;
+  backdrop-filter: blur(5px);
 }

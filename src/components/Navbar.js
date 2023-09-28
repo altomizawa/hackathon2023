@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
 
 function Navbar({ isPopupActive, setIsPopupActive }) {
   return (
@@ -7,9 +8,15 @@ function Navbar({ isPopupActive, setIsPopupActive }) {
         <li className="navbar__item">
           <a href="#about-app">O QUE É?</a>
         </li>
-        <button onClick={setIsPopupActive} className="navbar__button" href="#">
-          ENVIAR OCORRÊNCIA
-        </button>
+        <li>
+          <button
+            onClick={setIsPopupActive}
+            className="navbar__button"
+            href="#"
+          >
+            ENVIAR OCORRÊNCIA
+          </button>
+        </li>
       </ul>
     </nav>
   );

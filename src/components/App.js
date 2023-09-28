@@ -25,11 +25,11 @@ function App() {
   }
   return (
     <>
+      <Navbar isPopupActive={isPopupActive} setIsPopupActive={handlePopup} />
       <ReportCrimePopup
         isPopupActive={isPopupActive}
         setIsPopupActive={handlePopup}
       />
-      <Navbar isPopupActive={isPopupActive} setIsPopupActive={handlePopup} />
       <Header />
       <AboutApp />
       <VerifyLocation data={data} />
