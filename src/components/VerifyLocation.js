@@ -10,6 +10,7 @@ function VerifyLocation({ data }) {
   const scoreSection = document.querySelector(".verify-location__score");
   // const detailSection = document.querySelector('verify-location__details')
 
+  //FUNCTIONS TO HANDLE THE NAVIGATION WITHIN SECTION
   const handleSubmit = (e) => {
     e.preventDefault();
     formSection.classList.add("verify-location__form_inactive");
@@ -26,11 +27,43 @@ function VerifyLocation({ data }) {
     scoreSection.classList.remove("verify-location__form_inactive");
   };
 
+  //CONTROL EVERY CHANGE IN THE DROPDOWN MENU
   const handleDropDownChange = (e) => {
     // setSelected(e.target.value);
     setBairro(JSON.parse(e.target.value));
     setDropdownSelection(e.target.value);
   };
+
+  //CREATE AN ARRAY THAT SHOWS NEIGHBORHOODS SAFER THAN SELECTION
+  const saferToGo = data.filter(
+    (item) =>
+      item.TOTAL > bairro.TOTAL &&
+      item.REGIÃO === bairro.REGIÃO &&
+      item.TOTAL > 6
+  );
+
+  console.log(saferToGo);
+
+  //FUNCTION THAT RETURNS THE TEXT EXPLAINING HOW SAFE THE NEIGHBORHOOD IS
+  function isItSafeText() {
+    if (bairro.TOTAL < 4) {
+      return 'VOCÊ ESTÁ NUM BAIRRO PERIGOSO';
+    } else if (bairro.TOTAL < 5) {
+      return 'VOCÊ ESTÁ NUM BAIRRO MENOS SEGURO';
+    } else if (bairro.TOTAL > 4) {
+      return 'ESSE BAIRRO É RELATIVAMENTE SEGURO';
+    } else if (bairro.TOTAL > 7) {
+      return 'VOCÊ ESTÁ NUM DOS BAIRROS MAIS SEGUROS DA REGIÃO';
+    }
+  }
+
+  //VARIABLES TO CONTROL THE LENGTH OF THE BAR GRAPHS
+  const acidentesTransito = () => (bairro.ACIDENTES_TRANSITO * 9) / 2 + '%';
+  const estupros = () => (bairro.ESTUPRO * 9) / 2 + '%';
+  const furtos = () => (bairro.FURTOS * 9) / 2 + '%';
+  const homicidios = () => (bairro.HOMICIDIO * 9) / 2 + '%';
+  const lesoescorporais = () => (bairro.LESAO * 9) / 2 + '%';
+  const roubos = () => (bairro.ROUBOS * 9) / 2 + '%';
 
   return (
     <section className="verify-location" id="verify-location">
@@ -45,7 +78,7 @@ function VerifyLocation({ data }) {
             <option value="">Selecione um bairro</option>
             {data.map((bairro, i) => (
               <option key={i + 1} value={JSON.stringify(bairro)}>
-                {bairro.name}
+                {bairro.BAIRRO}
               </option>
             ))}
           </select>
@@ -67,11 +100,10 @@ function VerifyLocation({ data }) {
             </button>
           </div>
           <h2 className="verify-location__title">
-            O bairro {bairro.name} tem um nível de segurança de 6/10*.
+            O bairro {bairro.BAIRRO} tem um nível de segurança de {bairro.TOTAL}
+            /10*.
           </h2>
-          <p className="verify-location__text">
-            VOCÊ ESTÁ NO BAIRRO MAIS SEGURO DA REGIÃO
-          </p>
+          <p className="verify-location__text">{isItSafeText()}</p>
 
           <button className="verify-location__button">
             VEJA OPÇÕES MAIS SEGURAS
@@ -88,18 +120,72 @@ function VerifyLocation({ data }) {
           </div>
           <div className="verify-location__details-items">
             <h2 className="verify-location__details-title">
-              DETALHES DO BAIRRO {bairro.name}*:
+              DETALHES DO BAIRRO {bairro.BAIRRO}*:
+              <br />
+              <span style={{ fontSize: '1.5rem' }}>
+                (Barras maiores são melhores)
+              </span>
             </h2>
-            <p className="verify-location__details-item">
-              ACIDENTES DE TRÂNSITO: 43
-            </p>
-            <p className="verify-location__details-item">ESTUPROS: 43</p>
-            <p className="verify-location__details-item">FURTOS: 43</p>
-            <p className="verify-location__details-item">HOMICÍDIOS: 43</p>
-            <p className="verify-location__details-item">
-              LESÕES CORPORAIS: 43
-            </p>
-            <p className="verify-location__details-item">ROUBOS: 43</p>
+            <div className="verify-location__details-wrapper">
+              <div
+                className="verify-location__details-graph"
+                style={{ width: acidentesTransito() }}
+              ></div>
+              <p className="verify-location__details-item">
+                ACIDENTES DE TRÂNSITO
+              </p>
+              <p className="verify-location__details-item">
+                {bairro.ACIDENTES_TRANSITO}/10
+              </p>
+            </div>
+            <div className="verify-location__details-wrapper">
+              <div
+                className="verify-location__details-graph"
+                style={{ width: estupros() }}
+              ></div>
+              <p className="verify-location__details-item">ESTUPROS:</p>
+              <p className="verify-location__details-item">
+                {bairro.ESTUPRO}/10
+              </p>
+            </div>
+            <div className="verify-location__details-wrapper">
+              <div
+                className="verify-location__details-graph"
+                style={{ width: furtos() }}
+              ></div>
+              <p className="verify-location__details-item">FURTOS:</p>
+              <p className="verify-location__details-item">
+                {bairro.FURTOS}/10
+              </p>
+            </div>
+            <div className="verify-location__details-wrapper">
+              <div
+                className="verify-location__details-graph"
+                style={{ width: homicidios() }}
+              ></div>
+              <p className="verify-location__details-item">HOMICÍDIOS:</p>
+              <p className="verify-location__details-item">
+                {bairro.HOMICIDIO}/10
+              </p>
+            </div>
+            <div className="verify-location__details-wrapper">
+              <div
+                className="verify-location__details-graph"
+                style={{ width: lesoescorporais() }}
+              ></div>
+              <p className="verify-location__details-item">LESÕES CORPORAIS:</p>
+              <p className="verify-location__details-item">{bairro.LESAO}/10</p>
+            </div>
+            <div className="verify-location__details-wrapper">
+              <div
+                className="verify-location__details-graph"
+                style={{ width: roubos() }}
+              ></div>
+              <p className="verify-location__details-item">ROUBOS:</p>
+              <p className="verify-location__details-item">
+                {bairro.ROUBOS}/10
+              </p>
+            </div>
           </div>
           <p className="verify-location__disclaimer">
             * Baseado nos dados dos últimos 7 meses.
