@@ -2,10 +2,10 @@
   color: white;
   font-size: clamp(0.85rem, 3vw, 1.5rem);
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   position: relative;
 }
-.verify-location__details-item:after {
+/* .verify-location__details-item:after {
   content: "";
   height: 1rem;
   width: 3rem;
@@ -13,4 +13,4 @@
   top: 0.5rem;
   background-color: darkslategray;
   margin-left: 2rem;
-}
+} */

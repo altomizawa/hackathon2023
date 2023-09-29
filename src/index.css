@@ -33,7 +33,10 @@
 @import url("./blocks/verify-location/__score/verify-location__score.css");
 @import url("./blocks/verify-location/__details/verify-location__details.css");
 @import url("./blocks/verify-location/__details-title/verify-location__details-title.css");
+@import url("./blocks/verify-location/__details-items/verify-location__details-items.css");
 @import url("./blocks/verify-location/__details-item/verify-location__details-item.css");
+@import url("./blocks/verify-location/__details-wrapper/verify-location__details-wrapper.css");
+@import url("./blocks/verify-location/__details-container/verify-location__details-container.css");
 @import url("./blocks/verify-location/__title/verify-location__title.css");
 @import url("./blocks/verify-location/__text/verify-location__text.css");
 @import url("./blocks/verify-location/__dropdown/verify-location__dropdown.css");

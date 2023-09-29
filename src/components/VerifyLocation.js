@@ -149,70 +149,76 @@ function VerifyLocation({ data }) {
           <div className="verify-location__details-items">
             <h2 className="verify-location__details-title">
               DETALHES DO BAIRRO {bairro.BAIRRO}*:
-              <br />
-              <span style={{ fontSize: "1.5rem" }}>
+              {/* <br />
+              <span style={{ fontSize: "1rem" }}>
                 (Barras maiores são melhores)
-              </span>
+              </span> */}
             </h2>
-            <div className="verify-location__details-wrapper">
-              <div
-                className="verify-location__details-graph"
-                style={{ width: acidentesTransito() }}
-              ></div>
-              <p className="verify-location__details-item">
-                ACIDENTES DE TRÂNSITO
-              </p>
-              <p className="verify-location__details-item">
-                {bairro.ACIDENTES_TRANSITO}/10
-              </p>
-            </div>
-            <div className="verify-location__details-wrapper">
-              <div
-                className="verify-location__details-graph"
-                style={{ width: estupros() }}
-              ></div>
-              <p className="verify-location__details-item">ESTUPROS:</p>
-              <p className="verify-location__details-item">
-                {bairro.ESTUPRO}/10
-              </p>
-            </div>
-            <div className="verify-location__details-wrapper">
-              <div
-                className="verify-location__details-graph"
-                style={{ width: furtos() }}
-              ></div>
-              <p className="verify-location__details-item">FURTOS:</p>
-              <p className="verify-location__details-item">
-                {bairro.FURTOS}/10
-              </p>
-            </div>
-            <div className="verify-location__details-wrapper">
-              <div
-                className="verify-location__details-graph"
-                style={{ width: homicidios() }}
-              ></div>
-              <p className="verify-location__details-item">HOMICÍDIOS:</p>
-              <p className="verify-location__details-item">
-                {bairro.HOMICIDIO}/10
-              </p>
-            </div>
-            <div className="verify-location__details-wrapper">
-              <div
-                className="verify-location__details-graph"
-                style={{ width: lesoescorporais() }}
-              ></div>
-              <p className="verify-location__details-item">LESÕES CORPORAIS:</p>
-              <p className="verify-location__details-item">{bairro.LESAO}/10</p>
-            </div>
-            <div className="verify-location__details-wrapper">
-              <div
-                className="verify-location__details-graph"
-                style={{ width: roubos() }}
-              ></div>
-              <p className="verify-location__details-item">ROUBOS:</p>
-              <p className="verify-location__details-item">
-                {bairro.ROUBOS}/10
-              </p>
+            <div className="verify-location__details-container">
+              <div className="verify-location__details-wrapper">
+                <div
+                  className="verify-location__details-graph"
+                  style={{ width: acidentesTransito() }}
+                ></div>
+                <p className="verify-location__details-item">
+                  ACIDENTES DE TRÂNSITO
+                </p>
+                <p className="verify-location__details-item">
+                  {bairro.ACIDENTES_TRANSITO}/10
+                </p>
+              </div>
+              <div className="verify-location__details-wrapper">
+                <div
+                  className="verify-location__details-graph"
+                  style={{ width: estupros() }}
+                ></div>
+                <p className="verify-location__details-item">ESTUPROS:</p>
+                <p className="verify-location__details-item">
+                  {bairro.ESTUPRO}/10
+                </p>
+              </div>
+              <div className="verify-location__details-wrapper">
+                <div
+                  className="verify-location__details-graph"
+                  style={{ width: furtos() }}
+                ></div>
+                <p className="verify-location__details-item">FURTOS:</p>
+                <p className="verify-location__details-item">
+                  {bairro.FURTOS}/10
+                </p>
+              </div>
+              <div className="verify-location__details-wrapper">
+                <div
+                  className="verify-location__details-graph"
+                  style={{ width: homicidios() }}
+                ></div>
+                <p className="verify-location__details-item">HOMICÍDIOS:</p>
+                <p className="verify-location__details-item">
+                  {bairro.HOMICIDIO}/10
+                </p>
+              </div>
+              <div className="verify-location__details-wrapper">
+                <div
+                  className="verify-location__details-graph"
+                  style={{ width: lesoescorporais() }}
+                ></div>
+                <p className="verify-location__details-item">
+                  LESÕES CORPORAIS:
+                </p>
+                <p className="verify-location__details-item">
+                  {bairro.LESAO}/10
+                </p>
+              </div>
+              <div className="verify-location__details-wrapper">
+                <div
+                  className="verify-location__details-graph"
+                  style={{ width: roubos() }}
+                ></div>
+                <p className="verify-location__details-item">ROUBOS:</p>
+                <p className="verify-location__details-item">
+                  {bairro.ROUBOS}/10
+                </p>
+              </div>
             </div>
           </div>
           <p className="verify-location__disclaimer">
