@@ -5,26 +5,29 @@ function VerifyLocation({ data }) {
   const [dropdownSelection, setDropdownSelection] = useState(
     "Selecione um bairro"
   );
-
-  const formSection = document.querySelector(".verify-location__form");
-  const scoreSection = document.querySelector(".verify-location__score");
-  // const detailSection = document.querySelector('verify-location__details')
+  const [cardActive, setCardActive] = useState(true);
+  const [cardScoreActive, setCardScoreActive] = useState(false);
+  const [cardDetailActive, setCardDetailActive] = useState(false);
 
   //FUNCTIONS TO HANDLE THE NAVIGATION WITHIN SECTION
   const handleSubmit = (e) => {
     e.preventDefault();
-    formSection.classList.add("verify-location__form_inactive");
+    setCardActive(false);
+    setCardScoreActive(true);
   };
 
   const handleRedo = () => {
-    formSection.classList.remove("verify-location__form_inactive");
+    setCardScoreActive(false);
+    setCardActive(true);
   };
   const handleDetails = () => {
-    scoreSection.classList.add("verify-location__form_inactive");
+    setCardScoreActive(false);
+    setCardDetailActive(true);
   };
 
   const handleSeeScore = () => {
-    scoreSection.classList.remove("verify-location__form_inactive");
+    setCardDetailActive(false);
+    setCardScoreActive(true);
   };
 
   //CONTROL EVERY CHANGE IN THE DROPDOWN MENU
@@ -66,8 +69,16 @@ function VerifyLocation({ data }) {
 
   return (
     <section className="verify-location" id="verify-location">
+      {/* Verify location form */}
       <div className="verify-location__form-wrapper">
-        <div className="verify-location__form" id="form">
+        <div
+          className={
+            cardActive
+              ? "verify-location__form"
+              : "verify-location__form_inactive"
+          }
+          id="form"
+        >
           <h2 className="verify-location__title">Selecione um bairro:</h2>
           <select
             className="verify-location__dropdown"
@@ -89,7 +100,16 @@ function VerifyLocation({ data }) {
             PESQUISAR
           </button>
         </div>
-        <div className="verify-location__score" id="score">
+
+        {/* Location Score form */}
+        <div
+          className={
+            cardScoreActive
+              ? "verify-location__score"
+              : "verify-location__form_inactive"
+          }
+          id="score"
+        >
           <div className="verify-location__navbar">
             <button type="button" className="button" onClick={handleRedo}>
               ← REFAZER
@@ -111,7 +131,16 @@ function VerifyLocation({ data }) {
             * Baseado nos dados dos últimos 7 meses.
           </p>
         </div>
-        <div className="verify-location__details" id="score">
+
+        {/* Details Form */}
+        <div
+          className={
+            cardDetailActive
+              ? "verify-location__details"
+              : " verify-location__form_inactive"
+          }
+          id="score"
+        >
           <div className="verify-location__navbar">
             <button type="button" className="button" onClick={handleSeeScore}>
               ← VER SCORE
