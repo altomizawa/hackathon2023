@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function SaferOptions(saferOptions) {
   console.log(saferOptions)
-  const [isSaferPopupActive, setIsSaferPopupActive] = useState(true)
+  const [isSaferPopupActive, setIsSaferPopupActive] = useState(false)
   function togglePopup(){
     setIsSaferPopupActive(!isSaferPopupActive)
   }
