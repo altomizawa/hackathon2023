@@ -149,17 +149,17 @@ function VerifyLocation({ data }) {
           <div className="verify-location__details-items">
             <h2 className="verify-location__details-title">
               DETALHES DO BAIRRO {bairro.BAIRRO}*:
-              {/* <br />
+              <br />
               <span style={{ fontSize: "1rem" }}>
-                (Barras maiores são melhores)
-              </span> */}
+                (Notas maiores são melhores)
+              </span>
             </h2>
             <div className="verify-location__details-container">
               <div className="verify-location__details-wrapper">
-                <div
+                {/* <div
                   className="verify-location__details-graph"
                   style={{ width: acidentesTransito() }}
-                ></div>
+                ></div> */}
                 <p className="verify-location__details-item">
                   ACIDENTES DE TRÂNSITO
                 </p>
@@ -168,40 +168,40 @@ function VerifyLocation({ data }) {
                 </p>
               </div>
               <div className="verify-location__details-wrapper">
-                <div
+                {/* <div
                   className="verify-location__details-graph"
                   style={{ width: estupros() }}
-                ></div>
+                ></div> */}
                 <p className="verify-location__details-item">ESTUPROS:</p>
                 <p className="verify-location__details-item">
                   {bairro.ESTUPRO}/10
                 </p>
               </div>
               <div className="verify-location__details-wrapper">
-                <div
+                {/* <div
                   className="verify-location__details-graph"
                   style={{ width: furtos() }}
-                ></div>
+                ></div> */}
                 <p className="verify-location__details-item">FURTOS:</p>
                 <p className="verify-location__details-item">
                   {bairro.FURTOS}/10
                 </p>
               </div>
               <div className="verify-location__details-wrapper">
-                <div
+                {/* <div
                   className="verify-location__details-graph"
                   style={{ width: homicidios() }}
-                ></div>
+                ></div> */}
                 <p className="verify-location__details-item">HOMICÍDIOS:</p>
                 <p className="verify-location__details-item">
                   {bairro.HOMICIDIO}/10
                 </p>
               </div>
               <div className="verify-location__details-wrapper">
-                <div
+                {/* <div
                   className="verify-location__details-graph"
                   style={{ width: lesoescorporais() }}
-                ></div>
+                ></div> */}
                 <p className="verify-location__details-item">
                   LESÕES CORPORAIS:
                 </p>
@@ -210,10 +210,10 @@ function VerifyLocation({ data }) {
                 </p>
               </div>
               <div className="verify-location__details-wrapper">
-                <div
+                {/* <div
                   className="verify-location__details-graph"
                   style={{ width: roubos() }}
-                ></div>
+                ></div> */}
                 <p className="verify-location__details-item">ROUBOS:</p>
                 <p className="verify-location__details-item">
                   {bairro.ROUBOS}/10
