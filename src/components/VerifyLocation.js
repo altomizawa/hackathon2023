@@ -66,6 +66,7 @@ function VerifyLocation({ data }) {
   const homicidios = () => (bairro.HOMICIDIO * 9) / 2 + "%";
   const lesoescorporais = () => (bairro.LESAO * 9) / 2 + "%";
   const roubos = () => (bairro.ROUBOS * 9) / 2 + "%";
+  console.log(bairro)
 
   return (
     <section className="verify-location" id="verify-location">

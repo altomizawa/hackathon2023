@@ -1,6 +1,5 @@
 .verify-location__details-container {
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
   align-items: flex-start;
 }
