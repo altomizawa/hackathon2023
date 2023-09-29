@@ -29,7 +29,6 @@ function VerifyLocation({ data }) {
 
   //CONTROL EVERY CHANGE IN THE DROPDOWN MENU
   const handleDropDownChange = (e) => {
-    // setSelected(e.target.value);
     setBairro(JSON.parse(e.target.value));
     setDropdownSelection(e.target.value);
   };
@@ -47,23 +46,23 @@ function VerifyLocation({ data }) {
   //FUNCTION THAT RETURNS THE TEXT EXPLAINING HOW SAFE THE NEIGHBORHOOD IS
   function isItSafeText() {
     if (bairro.TOTAL < 4) {
-      return 'VOCÊ ESTÁ NUM BAIRRO PERIGOSO';
+      return "VOCÊ ESTÁ NUM BAIRRO PERIGOSO";
     } else if (bairro.TOTAL < 5) {
-      return 'VOCÊ ESTÁ NUM BAIRRO MENOS SEGURO';
+      return "VOCÊ ESTÁ NUM BAIRRO MENOS SEGURO";
     } else if (bairro.TOTAL > 4) {
-      return 'ESSE BAIRRO É RELATIVAMENTE SEGURO';
+      return "ESSE BAIRRO É RELATIVAMENTE SEGURO";
     } else if (bairro.TOTAL > 7) {
-      return 'VOCÊ ESTÁ NUM DOS BAIRROS MAIS SEGUROS DA REGIÃO';
+      return "VOCÊ ESTÁ NUM DOS BAIRROS MAIS SEGUROS DA REGIÃO";
     }
   }
 
   //VARIABLES TO CONTROL THE LENGTH OF THE BAR GRAPHS
-  const acidentesTransito = () => (bairro.ACIDENTES_TRANSITO * 9) / 2 + '%';
-  const estupros = () => (bairro.ESTUPRO * 9) / 2 + '%';
-  const furtos = () => (bairro.FURTOS * 9) / 2 + '%';
-  const homicidios = () => (bairro.HOMICIDIO * 9) / 2 + '%';
-  const lesoescorporais = () => (bairro.LESAO * 9) / 2 + '%';
-  const roubos = () => (bairro.ROUBOS * 9) / 2 + '%';
+  const acidentesTransito = () => (bairro.ACIDENTES_TRANSITO * 9) / 2 + "%";
+  const estupros = () => (bairro.ESTUPRO * 9) / 2 + "%";
+  const furtos = () => (bairro.FURTOS * 9) / 2 + "%";
+  const homicidios = () => (bairro.HOMICIDIO * 9) / 2 + "%";
+  const lesoescorporais = () => (bairro.LESAO * 9) / 2 + "%";
+  const roubos = () => (bairro.ROUBOS * 9) / 2 + "%";
 
   return (
     <section className="verify-location" id="verify-location">
@@ -122,7 +121,7 @@ function VerifyLocation({ data }) {
             <h2 className="verify-location__details-title">
               DETALHES DO BAIRRO {bairro.BAIRRO}*:
               <br />
-              <span style={{ fontSize: '1.5rem' }}>
+              <span style={{ fontSize: "1.5rem" }}>
                 (Barras maiores são melhores)
               </span>
             </h2>
