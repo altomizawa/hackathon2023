@@ -1,0 +1,47 @@
+.safer-options-popup{
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding-inline: 2rem;
+}
+
+.safer-options-popup>h2{
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+
+    font-size: clamp(1.5rem, 5vw, 4rem);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.safer-options-popup>p{
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.safer-options-popup>button{
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: white;
+    position: absolute;
+    top: 2rem;
+    right: 9rem;
+    cursor: pointer;
+}
+

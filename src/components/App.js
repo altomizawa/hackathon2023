@@ -6,6 +6,8 @@ import AboutApp from "./AboutApp";
 import VerifyLocation from "./VerifyLocation";
 import ReportCrimePopup from "./ReportCrimePopUp";
 import Footer from "./Footer";
+import SaferOptions from "./SaferOptionsPopup";
+
 
 async function fetchData() {
   try {
@@ -20,6 +22,7 @@ const data = await fetchData();
 
 function App() {
   const [isPopupActive, setIsPopupActive] = useState(false);
+  const isSaferOptionsPopupActive = false;
 
   return (
     <>
@@ -31,6 +34,7 @@ function App() {
       <Header />
       <AboutApp />
       <VerifyLocation data={data} />
+      <SaferOptions />
       <Footer />
     </>
   );
