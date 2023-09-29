@@ -43,6 +43,7 @@
 @import url("./blocks/verify-location/__dropdown/verify-location__dropdown.css");
 @import url("./blocks/verify-location/__navbar/verify-location__navbar.css");
 @import url("./blocks/verify-location/__disclaimer/verify-location__disclaimer.css");
+@import url("./blocks/verify-location/__button/verify-location__button_inactive.css");
 
 @import url("./blocks/footer/__text/footer__text.css");
 

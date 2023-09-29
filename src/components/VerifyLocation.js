@@ -9,6 +9,7 @@ function VerifyLocation({ data }) {
   const [cardScoreActive, setCardScoreActive] = useState(false);
   const [cardDetailActive, setCardDetailActive] = useState(false);
 
+
   //FUNCTIONS TO HANDLE THE NAVIGATION WITHIN SECTION
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,22 +41,20 @@ function VerifyLocation({ data }) {
   const saferToGo = data.filter(
     (item) =>
       item.TOTAL > bairro.TOTAL &&
-      item.REGIÃO === bairro.REGIÃO &&
-      item.TOTAL > 6
+      item.REGIÃO === bairro.REGIÃO
   );
-
   console.log(saferToGo);
 
   //FUNCTION THAT RETURNS THE TEXT EXPLAINING HOW SAFE THE NEIGHBORHOOD IS
   function isItSafeText() {
     if (bairro.TOTAL < 4) {
-      return "VOCÊ ESTÁ NUM BAIRRO PERIGOSO";
+      return "ESTE É UM BAIRRO PERIGOSO, CONSIDERE MUDAR SEU DESTINO";
     } else if (bairro.TOTAL < 5) {
-      return "VOCÊ ESTÁ NUM BAIRRO MENOS SEGURO";
-    } else if (bairro.TOTAL > 4) {
-      return "ESSE BAIRRO É RELATIVAMENTE SEGURO";
-    } else if (bairro.TOTAL > 7) {
-      return "VOCÊ ESTÁ NUM DOS BAIRROS MAIS SEGUROS DA REGIÃO";
+      return "ESTE É UM BAIRRO MENOS SEGURO";
+    } else if (bairro.TOTAL < 7) {
+      return "ESTE BAIRRO É RELATIVAMENTE SEGURO";
+    } else {
+      return "ESTE É UM DOS BAIRROS MAIS SEGUROS DA REGIÃO";
     }
   }
 
@@ -125,7 +124,7 @@ function VerifyLocation({ data }) {
           </h2>
           <p className="verify-location__text">{isItSafeText()}</p>
 
-          <button className="verify-location__button">
+          <button className= {bairro.TOTAL>6 ? "verify-location__button_inactive" : ""}>
             VEJA OPÇÕES MAIS SEGURAS
           </button>
           <p className="verify-location__disclaimer">
