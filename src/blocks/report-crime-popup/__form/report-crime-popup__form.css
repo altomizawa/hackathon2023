@@ -1,6 +1,6 @@
 .report-crime-popup__form {
   width: 50%;
-  height: 60%;
+  height: auto;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -9,4 +9,11 @@
   row-gap: 1rem;
   background-color: orange;
   position: relative;
+  padding-block: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .report-crime-popup__form {
+    width: 80%;
+  }
 }

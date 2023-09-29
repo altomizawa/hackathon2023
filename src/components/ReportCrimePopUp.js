@@ -22,10 +22,14 @@ function ReportCrimePopup({ isOpen, onClose }) {
           : "report-crime-popup"
       }
     >
+      <button
+        type="button"
+        onClick={onClose}
+        className="report-crime-popup__close-button"
+      >
+        X
+      </button>
       <form className="report-crime-popup__form">
-        <button onClick={onClose} className="report-crime-popup__close-button">
-          X
-        </button>
         <h3 className="report-crime-popup__title">ENVIAR OCORRÊNCIA</h3>
         <select
           className="verify-location__dropdown"
