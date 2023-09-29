@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar({ isPopupActive, setIsPopupActive }) {
+function Navbar({ onButtonClick }) {
   return (
     <nav className="navbar">
       <ul className="navbar__items">
@@ -9,7 +9,8 @@ function Navbar({ isPopupActive, setIsPopupActive }) {
         </li>
         <li>
           <button
-            onClick={setIsPopupActive}
+            type="button"
+            onClick={onButtonClick}
             className="navbar__button"
             href="#"
           >

@@ -1,4 +1,10 @@
 .verify-location__details-items {
-  /* border: 1px solid white; */
   width: 80%;
+  padding-top: 20%;
+}
+
+@media screen and (max-width: 400px) {
+  .verify-location__details-items {
+    padding-top: 30%;
+  }
 }

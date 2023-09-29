@@ -1,7 +1,7 @@
 .report-crime-popup__close-button {
   position: absolute;
-  top: 1rem;
-  right: 2rem;
+  bottom: 83%;
+  right: 20%;
   font-size: 3rem;
   cursor: pointer;
   font-weight: 600;
@@ -10,4 +10,17 @@
   border: none;
   padding: 2rem;
   color: #fff;
+}
+
+@media screen and (max-width: 650px) {
+  .report-crime-popup__close-button {
+    bottom: 81%;
+    right: 0%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .report-crime-popup__close-button {
+    bottom: 81%;
+  }
 }

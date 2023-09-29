@@ -20,16 +20,14 @@ const data = await fetchData();
 
 function App() {
   const [isPopupActive, setIsPopupActive] = useState(false);
-  function handlePopup() {
-    setIsPopupActive(!isPopupActive);
-  }
+
   return (
     <>
       <ReportCrimePopup
-        isPopupActive={isPopupActive}
-        setIsPopupActive={handlePopup}
+        isOpen={isPopupActive}
+        onClose={() => setIsPopupActive()}
       />
-      <Navbar isPopupActive={isPopupActive} setIsPopupActive={handlePopup} />
+      <Navbar onButtonClick={() => setIsPopupActive(true)} />
       <Header />
       <AboutApp />
       <VerifyLocation data={data} />
