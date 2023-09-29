@@ -1,5 +1,4 @@
 .verify-location__score {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +6,7 @@
   position: relative;
   text-align: center;
   background-color: grey;
-  padding-top: 3rem;
+  padding-block: 3rem;
 }
 
 .verify-location__score > button {
@@ -16,7 +15,7 @@
   border: 1px solid white;
   font-family: "IBM Plex Sans Condensed", sans-serif;
   color: white;
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 3vw, 1rem);
   font-weight: 600;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);

@@ -3,6 +3,8 @@
   border: none;
   font-family: "IBM Plex Sans Condensed", sans-serif;
   color: #fff;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
 }
 
 .button:hover {

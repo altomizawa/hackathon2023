@@ -115,7 +115,7 @@ function VerifyLocation({ data }) {
               ← REFAZER
             </button>
             <button type="button" className="button" onClick={handleDetails}>
-              MAIS DETALHES →
+              DETALHES →
             </button>
           </div>
           <h2 className="verify-location__title">
